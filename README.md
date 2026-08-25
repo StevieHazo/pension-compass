@@ -1,12 +1,7 @@
 # OFFICIAL
 
-# Pension Compass Retirement Platform: Dashboard Phase
+# Pension Compass Phase 13: Scenario Builder
 
-Adds a browser-based Retirement Dashboard that:
-- captures core retirement planning assumptions
-- shows a retirement snapshot
-- identifies whether the target is before or after the entered Normal Pension Age
-- creates a personalised list of links to relevant Pension Compass tools
-- saves the plan locally in the browser
+Complete replacement package. Adds Scenario Builder to the existing Pension Compass site, including navigation, local browser storage, scenario create/edit/delete controls, comparison table and visual income chart.
 
-The dashboard is a planning aid. It does not calculate entitlement, tax or personalised financial advice.
+Upload all files and the `assets` folder to the Pension Compass preview branch. Do not deploy these files to the SOS WiFi production project.
