@@ -1,12 +1,7 @@
 # OFFICIAL
 
-# Pension Pathway evolved visual preview
+# Pension Compass Phase 13: Scenario Builder
 
-This package evolves the stable Phase 13 design without replacing its JavaScript or calculator engines.
+Complete replacement package. Adds Scenario Builder to the existing Pension Compass site, including navigation, local browser storage, scenario create/edit/delete controls, comparison table and visual income chart.
 
-Upload and replace only:
-- styles.css
-- manifest.webmanifest
-- assets/icon.svg
-
-The visible site branding becomes Pension Pathway, the hero becomes Civil Service-specific, and the existing modern cards, gradients, spacing and interaction patterns remain intact.
+Upload all files and the `assets` folder to the Pension Compass preview branch. Do not deploy these files to the SOS WiFi production project.
