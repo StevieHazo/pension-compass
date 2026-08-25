@@ -83,7 +83,7 @@
             <div class="card-head"><div><span class="overline">Step 1 of 3</span><h2>Your pension details</h2></div><span class="privacy-badge">🔒 Private</span></div>
             <div class="progress"><i></i></div>
             <form id="calculatorForm" novalidate>
-              <label class="field-label" for="annualPension">Annual pension before exchange <button type="button" class="help" data-help="Use the annual pension figure shown on your statement or retirement quotation.">?</button></label>
+              <label class="field-label" for="annualPension">Annual pension before exchange</label>
               <p class="field-hint">Enter the amount in pounds per year</p>
               <div class="currency-field"><span>£</span><input id="annualPension" name="annualPension" inputmode="decimal" autocomplete="off" placeholder="20,000" aria-describedby="annualError"><small>per year</small></div>
               <p class="field-error" id="annualError"></p>
@@ -148,7 +148,6 @@
     </footer>
   </div>
 
-  <div class="modal-backdrop" id="helpModal" hidden><div class="modal" role="dialog" aria-modal="true" aria-labelledby="helpTitle"><button class="modal-close" data-close-modal aria-label="Close">×</button><h2 id="helpTitle">What figure should I use?</h2><p id="helpText"></p><button class="button primary" data-close-modal>Got it</button></div></div>
   <div class="consent" id="consentBanner" hidden><div><b>Your privacy choices</b><p>The calculator works without non-essential cookies. Live adverts and analytics are not connected in this build.</p></div><div><button class="button ghost dark" data-consent="rejected">Reject non-essential</button><button class="button primary" data-consent="accepted">Accept non-essential</button></div></div>
   <script src="app.js"></script>
 </body>
