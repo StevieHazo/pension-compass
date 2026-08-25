@@ -1,154 +1,28 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101828">
-  <meta name="description" content="Explore how exchanging annual pension for a lump sum could affect your retirement income.">
-  <title>Pension Compass | Lump sum explorer</title>
-  <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="app-shell">
-    <header class="topbar">
-      <a class="brand" href="#home" aria-label="Pension Compass home">
-        <span class="brand-mark" aria-hidden="true">P</span>
-        <span>Pension Compass</span>
-      </a>
-      <nav class="desktop-nav" aria-label="Main navigation">
-        <a href="#home" data-route="home">Home</a>
-        <a href="#calculator" data-route="calculator">Calculator</a>
-        <a href="#guides" data-route="guides">Guides</a>
-        <a href="#methodology" data-route="methodology">Methodology</a>
-      </nav>
-      <button class="icon-button menu-button" id="menuButton" aria-label="Open menu" aria-expanded="false">☰</button>
-    </header>
+<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111827"><meta name="description" content="Pension Compass retirement and exit calculation toolkit"><title>Pension Compass</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="assets/icon.svg"><link rel="stylesheet" href="styles.css"></head><body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><a class="brand" href="#home"><span>P</span>Pension Compass</a><nav><a href="#home">Home</a><a href="#tools">Tools</a><a href="#calculator">Calculator</a><a href="#methodology">Methodology</a></nav><button id="menu" aria-label="Open menu" aria-expanded="false">☰</button></header>
+<div class="mobile" id="mobile" hidden><a href="#home">Home</a><a href="#tools">All tools</a><a href="#calculator">Lump sum explorer</a><a href="#methodology">Methodology</a><a href="#privacy">Privacy</a></div>
+<main id="main">
+<section class="page active" data-page="home"><div class="hero"><div><span class="kicker">Free, private and independent</span><h1>Your pension toolkit, all in <em>one place.</em></h1><p>Explore retirement, exit and pension-adjustment scenarios through a growing collection of simple, visual tools.</p><div class="actions"><a class="button primary" href="#tools">Explore all tools →</a><a class="button secondary" href="#calculator">Open lump sum tool</a></div><div class="trust"><span>✓ No sign-up</span><span>✓ Figures stay on your device</span><span>✓ Clear methodology</span></div></div><div class="hero-art"><div class="phone"><small>Your toolkit</small><strong>8 tools</strong><div class="bars"><i></i><i></i><i></i><i></i></div><div class="phone-row"><span>Available now</span><b>1</b></div><div class="phone-row"><span>On the roadmap</span><b>7</b></div></div><span class="float one">Private by default</span><span class="float two">Built around you</span></div></div>
+<div class="home-tools"><div class="section-title"><span>Tools at a glance</span><h2>A toolkit that grows with you</h2><p>One working calculator today, with clearly labelled spaces for the next services.</p></div><div class="mini-grid"><a href="#calculator" class="mini live"><i>◒</i><div><b>Lump sum explorer</b><small>Available now</small></div><strong>→</strong></a><a href="#tools" class="mini"><i class="coral">↘</i><div><b>Early retirement</b><small>Coming soon</small></div><strong>→</strong></a><a href="#tools" class="mini"><i class="mint">＋</i><div><b>EPA estimator</b><small>Coming soon</small></div><strong>→</strong></a><a href="#tools" class="mini"><i class="violet">◐</i><div><b>Partial retirement</b><small>Coming soon</small></div><strong>→</strong></a></div></div>
+<div class="benefits"><article><i>↗</i><h3>Instant scenarios</h3><p>Adjust an amount and see the illustration update.</p></article><article><i>◎</i><h3>Private by design</h3><p>The figures stay inside your browser.</p></article><article><i>≡</i><h3>Transparent</h3><p>See the rule, arithmetic and limitations.</p></article></div><div class="ad"><small>Advertisement</small><span>Future contextual advertising space</span></div></section>
 
-    <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="#home">Home</a><a href="#calculator">Calculator</a><a href="#guides">Guides</a><a href="#methodology">Methodology</a><a href="#privacy">Privacy</a>
-    </div>
+<section class="page" data-page="tools"><div class="tools-head"><div><span class="kicker">Pension Compass toolkit</span><h1>Choose the tool you need</h1><p>The lump sum explorer is available now. Every other service is a visual placeholder until its rules, sources and tests are approved.</p></div><aside><strong>8</strong><span>tools in the roadmap</span></aside></div><div class="filters"><button class="active" data-filter="all">All tools</button><button data-filter="retirement">Retirement</button><button data-filter="exit">Leaving service</button><button data-filter="tax">Tax and adjustments</button></div><div class="tool-grid" id="toolGrid">
+<article class="tool-card featured" data-category="retirement"><div class="tool-top"><i>◒</i><span class="status live">Available now</span></div><h2>Lump sum explorer</h2><p>See how a chosen lump sum could affect annual and monthly alpha pension figures.</p><div class="tags"><span>Interactive</span><span>Private</span></div><a href="#calculator">Open calculator →</a></article>
+<article class="tool-card" data-category="retirement"><div class="tool-top"><i class="coral">↘</i><span class="status">Coming soon</span></div><h2>Early retirement calculator</h2><p>Reserved for exploring the possible effect of taking pension benefits before normal pension age.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="retirement"><div class="tool-top"><i class="mint">＋</i><span class="status">Coming soon</span></div><h2>EPA estimator</h2><p>Reserved for estimating scenarios involving an Effective Pension Age arrangement.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="retirement"><div class="tool-top"><i class="violet">◐</i><span class="status">Coming soon</span></div><h2>Partial Retirement Calculator</h2><p>Reserved for exploring pension and working-pattern scenarios connected with partial retirement.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="retirement"><div class="tool-top"><i class="amber">◇</i><span class="status">Coming soon</span></div><h2>Early Retirement Buy-Out Calculator</h2><p>Reserved for modelling Early Retirement Buy-Out scenarios once the rules are documented.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="exit"><div class="tool-top"><i class="rose">↗</i><span class="status">Coming soon</span></div><h2>Voluntary exit calculator</h2><p>Reserved for a clear illustration of voluntary exit payment scenarios.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="exit"><div class="tool-top"><i class="navy">⇄</i><span class="status">Coming soon</span></div><h2>Compulsory or voluntary redundancy calculator</h2><p>Reserved for comparing compulsory and voluntary redundancy payment scenarios.</p><span class="planned">Planned service</span></article>
+<article class="tool-card" data-category="tax"><div class="tool-top"><i class="green">%</i><span class="status">Coming soon</span></div><h2>HMRC Pension Adjustment Calculator</h2><p>Reserved for a pension-adjustment journey linked to the relevant HMRC rules and sources.</p><span class="planned">Planned service</span></article>
+</div><div class="info"><b>i</b><p><strong>Why are some tools placeholders?</strong><br>Each service needs its own current rule specification, official sources, worked examples and test pack before it can safely calculate a result.</p></div><div class="ad"><small>Advertisement</small><span>Future contextual advertising space</span></div></section>
 
-    <main id="main">
-      <section class="page active" data-page="home">
-        <div class="hero">
-          <div class="hero-copy">
-            <div class="pill"><span></span> Free, private and independent</div>
-            <h1>Make your pension options feel <em>clear.</em></h1>
-            <p class="hero-lead">Explore the trade-off between annual pension and a retirement lump sum in a simple, visual way.</p>
-            <div class="hero-actions">
-              <a class="button primary" href="#calculator">Start exploring <span>→</span></a>
-              <a class="button ghost" href="#methodology">See how it works</a>
-            </div>
-            <div class="trust-row">
-              <span>✓ No sign-up</span><span>✓ Figures stay on your device</span><span>✓ Clear methodology</span>
-            </div>
-          </div>
-          <div class="hero-visual" aria-label="Example pension result">
-            <div class="floating-chip chip-one">Private by default</div>
-            <div class="phone-card">
-              <div class="phone-head"><span>Your illustration</span><span class="status-dot"></span></div>
-              <p>Annual pension</p><strong>£20,000</strong>
-              <div class="mini-chart" aria-hidden="true"><i style="height:38%"></i><i style="height:52%"></i><i style="height:47%"></i><i style="height:68%"></i><i style="height:77%"></i><i style="height:88%"></i></div>
-              <div class="phone-grid"><div><small>Lump sum</small><b>£48,000</b></div><div><small>Monthly</small><b>£1,667</b></div></div>
-              <div class="phone-note">Illustration only</div>
-            </div>
-            <div class="floating-chip chip-two">No account needed</div>
-          </div>
-        </div>
+<section class="page" data-page="calculator"><div class="calc-layout"><div class="calc-copy"><span class="kicker">Alpha scheme MVP</span><h1>Build your illustration</h1><p>Use the annual pension figure from your statement or quotation. This version illustrates a chosen lump sum and does not calculate the maximum permitted amount.</p><ol><li class="on"><b>1</b><span>Your pension<small>Enter the starting figure</small></span></li><li><b>2</b><span>Choose a lump sum<small>Use the slider or type</small></span></li><li><b>3</b><span>Review the result<small>See the breakdown</small></span></li></ol></div><form id="calc" class="calc-card" novalidate><div class="card-heading"><div><small>Step 1 of 3</small><h2>Your pension details</h2></div><span>🔒 Private</span></div><div class="progress"><i></i></div><label for="annual">Annual pension before exchange</label><p>Enter the amount in pounds per year</p><div class="money"><span>£</span><input id="annual" inputmode="decimal" placeholder="20,000"><small>per year</small></div><div class="error" id="annualError"></div><div class="label"><label for="slider">Proposed lump sum</label><output id="lumpOut">£48,000</output></div><p>Move the slider or enter a figure below</p><input id="slider" class="range" type="range" min="0" max="100000" step="1000" value="48000"><div class="range-ends"><span>£0</span><span>£100,000</span></div><div class="money short"><span>£</span><input id="lump" inputmode="decimal" value="48,000"></div><div class="error" id="lumpError"></div><button class="button primary full">Calculate my illustration →</button><small class="privacy">No figures are saved or sent anywhere.</small></form></div>
+<section id="results" class="results" hidden><header><div><span>✓ Illustration ready</span><h2>Your pension snapshot</h2><p>Based on the figures you entered</p></div><button id="print" aria-label="Print result">⎙</button></header><div class="result-grid"><article class="result-main"><small>Annual pension after exchange</small><strong id="resAnnual">£0</strong><span id="resMonthly">£0 per month</span><div><i id="resBar"></i></div><p><span>Starting pension</span><b id="resStart">£0</b></p></article><article class="result-tile mint-bg"><small>Your chosen lump sum</small><strong id="resLump">£0</strong><span>one-off illustration</span></article><article class="result-tile violet-bg"><small>Annual pension exchanged</small><strong id="resExchanged">£0</strong><span>at £12 for each £1</span></article></div><details><summary>How this was calculated <span>+</span></summary><p id="working"></p><p>Rule LS-ALPHA-001, version 0.1. <a href="https://www.civilservicepensionscheme.org.uk/employerhub/kbarticle/?id=KA-01131" target="_blank" rel="noreferrer">View the official source</a>.</p></details><div class="warning"><b>!</b><p><strong>This is an illustration, not a pension quotation or financial advice.</strong><br>It does not check tax limits, entitlement, retirement factors, McCloud remedy, added pension, AVCs or dependant benefits.</p></div></section><div class="ad"><small>Advertisement</small><span>Future advertising space after the complete result and warning</span></div></section>
 
-        <section class="feature-section">
-          <div class="section-heading"><span>Designed around you</span><h2>A calmer way to explore the numbers</h2><p>No dense spreadsheet. No jargon-heavy form. Just clear choices and transparent results.</p></div>
-          <div class="feature-grid">
-            <article class="feature-card accent-blue"><div class="feature-icon">↗</div><h3>Instant scenarios</h3><p>Adjust your lump sum and see the annual and monthly pension figures change immediately.</p></article>
-            <article class="feature-card accent-mint"><div class="feature-icon">◎</div><h3>Your data stays yours</h3><p>The calculation runs in your browser. The figures you enter are not sent to a server.</p></article>
-            <article class="feature-card accent-violet"><div class="feature-icon">≡</div><h3>Show the workings</h3><p>Every result includes the exchange rate, arithmetic, limitations and source used.</p></article>
-          </div>
-        </section>
-        <div class="ad-slot"><span>Advertisement</span><p>Reserved for a future contextual advert</p></div>
-      </section>
-
-      <section class="page" data-page="calculator">
-        <div class="calculator-layout">
-          <div class="calculator-intro">
-            <div class="pill"><span></span> Alpha scheme MVP</div>
-            <h1>Build your illustration</h1>
-            <p>Use the annual pension figure from your statement or quotation. This version illustrates a chosen lump sum. It does not calculate the maximum permitted amount.</p>
-            <div class="step-list"><div class="active"><b>1</b><span><strong>Your pension</strong><small>Enter the starting figure</small></span></div><div><b>2</b><span><strong>Choose a lump sum</strong><small>Use the slider or type</small></span></div><div><b>3</b><span><strong>Review the result</strong><small>See the breakdown</small></span></div></div>
-          </div>
-
-          <div class="calculator-card">
-            <div class="card-head"><div><span class="overline">Step 1 of 3</span><h2>Your pension details</h2></div><span class="privacy-badge">🔒 Private</span></div>
-            <div class="progress"><i></i></div>
-            <form id="calculatorForm" novalidate>
-              <label class="field-label" for="annualPension">Annual pension before exchange</label>
-              <p class="field-hint">Enter the amount in pounds per year</p>
-              <div class="currency-field"><span>£</span><input id="annualPension" name="annualPension" inputmode="decimal" autocomplete="off" placeholder="20,000" aria-describedby="annualError"><small>per year</small></div>
-              <p class="field-error" id="annualError"></p>
-
-              <div class="field-spacer"></div>
-              <div class="label-row"><label class="field-label" for="lumpSlider">Proposed lump sum</label><output id="lumpOutput" for="lumpSlider">£48,000</output></div>
-              <p class="field-hint">Move the slider or enter a figure below</p>
-              <input class="range" id="lumpSlider" type="range" min="0" max="100000" step="1000" value="48000">
-              <div class="range-labels"><span>£0</span><span>£100,000</span></div>
-              <div class="currency-field compact"><span>£</span><input id="lumpSum" name="lumpSum" inputmode="decimal" autocomplete="off" value="48,000" aria-describedby="lumpError"></div>
-              <p class="field-error" id="lumpError"></p>
-
-              <button class="button primary full" type="submit">Calculate my illustration <span>→</span></button>
-              <p class="form-note">No figures are saved or sent anywhere.</p>
-            </form>
-          </div>
-        </div>
-
-        <section id="results" class="results-panel" hidden aria-live="polite">
-          <div class="result-header"><div><span class="success">✓ Illustration ready</span><h2>Your pension snapshot</h2><p>Based on the figures you entered</p></div><button class="icon-button" id="printButton" aria-label="Print result">⎙</button></div>
-          <div class="result-grid">
-            <article class="result-main"><span>Annual pension after exchange</span><strong id="resultAnnual">£0</strong><small id="resultMonthly">£0 per month</small><div class="result-bar"><i id="resultBar"></i></div><p><span>Starting pension</span><b id="startingPension">£0</b></p></article>
-            <article class="result-tile mint"><span>Your chosen lump sum</span><strong id="resultLump">£0</strong><small>one-off illustration</small></article>
-            <article class="result-tile violet"><span>Annual pension exchanged</span><strong id="resultExchanged">£0</strong><small>at £12 for each £1</small></article>
-          </div>
-          <details class="breakdown"><summary>How we calculated this <span>+</span></summary><div><p id="calculationText"></p><p>Rule: LS-ALPHA-001, version 0.1. <a href="https://www.civilservicepensionscheme.org.uk/employerhub/kbarticle/?id=KA-01131" target="_blank" rel="noreferrer">View the official source</a>.</p></div></details>
-          <div class="warning-card"><div>!</div><p><strong>This is an illustration, not a pension quotation or financial advice.</strong><br>It does not check tax limits, entitlement, retirement factors, McCloud remedy, added pension, AVCs or dependant benefits. Verify your options with the scheme administrator.</p></div>
-        </section>
-        <div class="ad-slot after-result"><span>Advertisement</span><p>Reserved for a future advert after the complete result and warning</p></div>
-      </section>
-
-      <section class="page content-page" data-page="guides">
-        <div class="page-hero"><span class="overline">Learn at your pace</span><h1>Pension guides without the jargon</h1><p>Plain-English explainers to help you understand what the calculator can and cannot tell you.</p></div>
-        <div class="guide-grid">
-          <article><span>5 min read</span><h2>What does pension commutation mean?</h2><p>Understand the basic exchange between annual pension and a retirement lump sum.</p><a href="#methodology">Read the guide →</a></article>
-          <article><span>4 min read</span><h2>How the alpha illustration works</h2><p>See the rate, formula and limitations used by this first calculator module.</p><a href="#methodology">View methodology →</a></article>
-          <article><span>3 min read</span><h2>What figures should I use?</h2><p>Why your current annual benefit statement or retirement quotation is the best starting point.</p><a href="#calculator">Open calculator →</a></article>
-        </div>
-        <div class="ad-slot"><span>Advertisement</span><p>Reserved for a future contextual advert</p></div>
-      </section>
-
-      <section class="page content-page" data-page="methodology">
-        <div class="page-hero"><span class="overline">Open methodology</span><h1>See exactly how the result works</h1><p>The calculation rule is separate from the design so it can be versioned, tested and disabled if it changes.</p></div>
-        <div class="method-card"><div><span>Rule ID</span><b>LS-ALPHA-001</b></div><div><span>Exchange rate</span><b>£12 : £1</b></div><div><span>Rule version</span><b>0.1</b></div><div><span>Source checked</span><b>25 August 2026</b></div></div>
-        <div class="article-card"><h2>The rule used</h2><p>For this alpha illustration, every £1 of annual pension given up produces £12 of lump sum.</p><div class="formula"><span>Annual pension exchanged</span><b>=</b><span>Chosen lump sum ÷ 12</span></div><h2>Important limits</h2><ul><li>The app does not calculate the maximum lump sum permitted.</li><li>It does not calculate tax or promise that a lump sum will be tax-free.</li><li>It does not calculate early or late retirement factors.</li><li>It does not connect to pension records or confirm entitlement.</li></ul><a class="text-link" href="https://www.civilservicepensionscheme.org.uk/employerhub/kbarticle/?id=KA-01131" target="_blank" rel="noreferrer">Open the Civil Service Pension Scheme source →</a></div>
-      </section>
-
-      <section class="page content-page" data-page="privacy">
-        <div class="page-hero"><span class="overline">Privacy first</span><h1>Your figures stay on your device</h1><p>The calculator works without an account and does not send the amounts you enter to a server.</p></div>
-        <div class="article-card"><h2>Calculator data</h2><p>The calculation takes place inside your browser. This build does not save or transmit your pension figures.</p><h2>Advertising</h2><p>No live advertising or analytics service is connected. Before either is enabled, the site will need production consent controls, a cookie register and an updated privacy notice.</p><h2>Your choice</h2><p id="consentStatus">No non-essential technology choice has been stored.</p><button class="button ghost dark" id="reviewConsent">Review privacy choice</button></div>
-      </section>
-
-      <section class="page content-page" data-page="advertising">
-        <div class="page-hero"><span class="overline">Independent by design</span><h1>Advertising will never shape your result</h1><p>The core calculator is intended to remain free. Any future adverts will be clearly labelled and kept away from the calculator controls and result.</p></div>
-        <div class="article-card"><ul class="check-list"><li>Advertisers do not change or approve calculations.</li><li>Adverts will not appear between input fields or beside action buttons.</li><li>Adverts will not appear inside the result card.</li><li>Calculator inputs and outputs will not be sent to advertisers.</li><li>The calculator will remain usable if non-essential technologies are rejected.</li></ul></div>
-      </section>
-    </main>
-
-    <footer>
-      <div class="footer-grid"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">P</span><span>Pension Compass</span></a><p>Clear pension illustrations, built for understanding.</p></div><div><h2>Product</h2><a href="#calculator">Calculator</a><a href="#guides">Guides</a><a href="#methodology">Methodology</a></div><div><h2>Trust</h2><a href="#privacy">Privacy</a><a href="#advertising">Advertising</a><a href="#methodology">Sources</a></div></div>
-      <div class="footer-bottom"><span>Independent illustration only. Not an official government service.</span><span>© <span id="year"></span> Pension Compass</span></div>
-    </footer>
-  </div>
-
-  <div class="consent" id="consentBanner" hidden><div><b>Your privacy choices</b><p>The calculator works without non-essential cookies. Live adverts and analytics are not connected in this build.</p></div><div><button class="button ghost dark" data-consent="rejected">Reject non-essential</button><button class="button primary" data-consent="accepted">Accept non-essential</button></div></div>
-  <script src="app.js"></script>
-</body>
-</html>
+<section class="page content" data-page="methodology"><span class="kicker">Open methodology</span><h1>See exactly how the result works</h1><p class="lead">The calculation rule is separate from the design so it can be versioned, tested and disabled if it changes.</p><div class="facts"><div><small>Rule ID</small><b>LS-ALPHA-001</b></div><div><small>Exchange rate</small><b>£12 : £1</b></div><div><small>Rule version</small><b>0.1</b></div><div><small>Source checked</small><b>25 August 2026</b></div></div><article class="article"><h2>The rule used</h2><p>For this alpha illustration, every £1 of annual pension given up produces £12 of lump sum.</p><div class="formula"><span>Annual pension exchanged</span><b>=</b><span>Chosen lump sum ÷ 12</span></div><h2>Important limits</h2><ul><li>The app does not calculate the maximum permitted lump sum.</li><li>It does not calculate tax or promise that a lump sum will be tax-free.</li><li>It does not calculate early or late retirement factors.</li><li>It does not connect to pension records or confirm entitlement.</li></ul></article></section>
+<section class="page content" data-page="privacy"><span class="kicker">Privacy first</span><h1>Your figures stay on your device</h1><article class="article"><h2>Calculator data</h2><p>The calculation takes place inside your browser. This build does not save or transmit your pension figures.</p><h2>Advertising</h2><p>No live advertising or analytics service is connected. Production consent controls will be needed before either is enabled.</p></article></section>
+</main>
+<footer><div><a class="brand foot" href="#home"><span>P</span>Pension Compass</a><p>Clear pension illustrations, built for understanding.</p></div><div><b>Product</b><a href="#tools">All tools</a><a href="#calculator">Lump sum explorer</a><a href="#methodology">Methodology</a></div><div><b>Trust</b><a href="#privacy">Privacy</a><a href="#methodology">Sources</a></div><small>Independent illustration only. Not an official government service.</small></footer>
+<script src="app.js"></script></body></html>
