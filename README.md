@@ -1,53 +1,14 @@
-# OFFICIAL-SENSITIVE
+# OFFICIAL
 
-# Pension Compass
+# Pension Pathway rebrand for the stable Phase 13 site
 
-A dependency-free, mobile-first pension lump sum illustration site ready for a GitHub repository and GitHub Pages.
+This is a cosmetic-only replacement package. It deliberately does not contain app.js or any calculator engine files, so it cannot overwrite or weaken the stable Phase 13 calculations.
 
-## Included
+Upload these files over the existing Phase 13 deployment:
+- styles.css
+- manifest.webmanifest
+- assets/icon.svg
 
-- Slick app-style responsive interface
-- Alpha chosen-lump-sum illustration
-- Interactive slider and manual entry
-- Accessible validation and keyboard focus
-- Animated result cards and print view
-- Methodology, guides, privacy and advertising-independence pages
-- Advertising placeholders outside the calculator and result
-- Demonstration consent journey with no live advertising or analytics
-- PWA manifest and app icon
+The CSS visually rebrands the existing site from Pension Compass to Pension Pathway, adds the Civil Service retirement planning strapline, replaces the P tile with a three-stage pathway mark, and applies a navy, blue and teal public-service palette.
 
-## Publish with GitHub Pages
-
-1. Create a new GitHub repository.
-2. Upload every file and the `assets` folder from this project to the repository root.
-3. Commit the files.
-4. Open **Settings**, then **Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select the `main` branch and `/ (root)`, then save.
-7. Open the Pages address shown by GitHub after deployment.
-
-No build command or package installation is required.
-
-## Local preview
-
-Open `index.html` directly, or use any simple static web server.
-
-## Calculation implemented
-
-Rule `LS-ALPHA-001`: annual pension exchanged equals the chosen lump sum divided by 12.
-
-Official source:
-https://www.civilservicepensionscheme.org.uk/employerhub/kbarticle/?id=KA-01131
-
-## Before public launch
-
-- Obtain independent pension-rule review.
-- Implement a supported maximum-lump-sum rule before advertising that feature.
-- Complete accessibility, privacy, cookies, legal and financial-promotion reviews.
-- Replace placeholder consent with a production consent-management platform before enabling advertising or analytics.
-- Add final business contact details, terms and a current change log.
-- Review the repository classification before making it public.
-
-## Classification
-
-OFFICIAL-SENSITIVE
+The underlying index.html title remains unchanged until a clean copy of the stable Phase 13 index.html is supplied. The on-page name and logo are replaced visually without changing the stable JavaScript.
