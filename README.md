@@ -1,9 +1,12 @@
 # OFFICIAL
 
-# Pension Compass Phase 7
+# Pension Compass Phase 8
 
-Adds an Early Retirement Buy-Out Planner preview.
+Adds a Tax & Allowances Hub with external links to official GOV.UK and HMRC guidance for:
+- Annual Allowance
+- Carry Forward
+- Money Purchase Annual Allowance
 
-The planner uses official quoted PCSPS and alpha buy-out costs, then allocates entered compensation, employer top-up and personal funds. It displays total cost, available funds, funding percentage, shortfall and remaining compensation.
+The hub does not calculate tax liabilities.
 
-It does not derive actuarial buy-out factors or confirm eligibility.
+The Early Retirement Explorer v2 factor extraction has also started. See `early-retirement-v2-extraction.json` for the extracted workbook structure and table samples.
