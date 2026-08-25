@@ -1,5 +1,5 @@
 /**
- * CAPITA - CONFIDENTIAL INTERNAL
+ * OFFICIAL
  * Compensation Calculator Engine v0.1
  *
  * Clean JavaScript translation of the formula layers in:
