@@ -1,19 +1,13 @@
 # OFFICIAL
 
-# Pension Compass Phase 3
+# Pension Compass Phase 4
 
-GitHub/Vercel-ready static site with three live tools:
+Includes:
+- Lump Sum Explorer
+- Compensation Calculator
+- EPA Estimator
+- Added Pension Estimator preview for one-off payment conversions
 
-- Alpha lump sum illustration
-- Compensation Calculator for Voluntary Exit, Voluntary Redundancy and Compulsory Redundancy
-- EPA Estimator for EPA-1, EPA-2 and EPA-3 using the 2026 workbook cost tables
+The Added Pension preview converts a lump-sum payment to annual pension, or a target annual pension to a required lump-sum payment, using the supplied NPA and revaluation factor tables. Monthly contribution journeys and headroom checks are not enabled in this release.
 
-The EPA web release calculates contribution rate, estimated annual cost and monthly cost. Headroom is explicitly not shown in this release.
-
-## Deploy
-
-Upload all files and the `assets` folder to the `compass-v2` branch. No build command is required.
-
-## Classification
-
-OFFICIAL
+Upload all replacement files and the `assets` folder to the `compass-v2` branch. No build command is required.
