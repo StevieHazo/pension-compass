@@ -1,0 +1,56 @@
+/* OFFICIAL
+   Civil Service Pension Assistant branding layer.
+   Intentionally changes branding colours only. It does not alter the Phase 13 layout. */
+:root {
+  --blue: #0047ba;
+  --violet: #6754e8;
+  --mint: #28a197;
+}
+
+.brand i,
+.tool > i {
+  background: linear-gradient(145deg, #0047ba, #6754e8);
+}
+
+.primary {
+  background: linear-gradient(135deg, #0047ba, #5f6fe7);
+  box-shadow: 0 12px 28px rgba(0, 71, 186, 0.27);
+}
+
+.primary:hover {
+  background: linear-gradient(135deg, #003784, #0047ba);
+}
+
+h1 em {
+  background: linear-gradient(90deg, #0047ba, #6754e8);
+  background-clip: text;
+  color: transparent;
+}
+
+.eyebrow,
+.tool a,
+.action-card a {
+  color: #0047ba;
+}
+
+.bars i {
+  background: linear-gradient(#6754e8, #0047ba);
+}
+
+.hero-card p b,
+.tool.live > span,
+.success {
+  color: #1aa894;
+}
+
+.money:focus-within,
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0047ba;
+  outline-color: rgba(0, 71, 186, 0.1);
+}
+
+.headroom-track i {
+  background: linear-gradient(90deg, #28a197, #7dd3fc);
+}
