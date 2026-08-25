@@ -16,13 +16,19 @@ export function calculateAddedPension(input){
  const amount=Number(input.amount),direction=input.direction,cover=input.cover||'self',sex=input.sex||'male';
  if(!(amount>0))throw new RangeError('amount must be greater than zero.');
  if(!['payment-to-pension','pension-to-payment'].includes(direction))throw new RangeError('Select a calculation direction.');
+ const paymentFrequency=input.paymentFrequency||'lump-sum';
+ if(!['lump-sum','monthly'].includes(paymentFrequency))throw new RangeError('Select lump-sum or monthly contributions.');
  const age=ageAt(dob,start);if(age<17)throw new RangeError('Age at contract start must be at least 17.');
  const np=npaParts(dob,npaDate),down=np.years,up=np.months?down+1:down;
  if(!ADDED_PENSION_FACTORS[String(down)]||!ADDED_PENSION_FACTORS[String(up)])throw new RangeError('Only Normal Pension Ages 65 to 68 are supported by the supplied workbook tables.');
  const col=cover==='dependants'?2:(sex==='female'?1:0),lo=factorFor(ADDED_PENSION_FACTORS[String(down)],age,col),hi=factorFor(ADDED_PENSION_FACTORS[String(up)],age,col);
  const npaFactor=hi.factor*(np.months/12)+lo.factor*((12-np.months)/12),aprils=aprilsBetween(start,npaDate),rev=REVALUATION_FACTORS[String(Math.min(aprils,Math.max(...Object.keys(REVALUATION_FACTORS).map(Number))))];
  if(!Number.isFinite(rev))throw new RangeError('No revaluation factor is available for this contract period.');
- const combined=npaFactor*rev,result=direction==='payment-to-pension'?amount/combined:amount*combined;
- return{direction,inputAmount:amount,result:round(result),npaFactor:round(npaFactor,8),revaluationFactor:rev,combinedFactor:round(combined,8),normalPensionAge:np,ageAtContractStart:age,lookupAge:lo.age,cover,sex,contractStartDate:start.toISOString().slice(0,10),normalPensionDate:npaDate.toISOString().slice(0,10),warnings:['Illustration only. Added Pension factors and limits may change.','This release supports lump-sum payment conversions only.','The result does not confirm eligibility, tax treatment or available added-pension headroom.']};
+ const combined=npaFactor*rev;
+ const annualised=paymentFrequency==='monthly'?amount*12:amount;
+ const result=direction==='payment-to-pension'?annualised/combined:(paymentFrequency==='monthly'?amount*combined/12:amount*combined);
+ const headroomLimit=Number(input.headroomLimit||0),existingEPA=Number(input.existingEPA||0),existingAddedPension=Number(input.existingAddedPension||0);
+ const pensionBought=direction==='payment-to-pension'?result:amount,usedBefore=existingEPA+existingAddedPension,remainingBefore=Math.max(0,headroomLimit-usedBefore),remainingAfter=Math.max(0,remainingBefore-pensionBought),headroomPass=headroomLimit<=0?null:pensionBought<=remainingBefore;
+ return{direction,paymentFrequency,inputAmount:amount,result:round(result),npaFactor:round(npaFactor,8),revaluationFactor:rev,combinedFactor:round(combined,8),normalPensionAge:np,ageAtContractStart:age,lookupAge:lo.age,cover,sex,contractStartDate:start.toISOString().slice(0,10),normalPensionDate:npaDate.toISOString().slice(0,10),headroom:{limit:round(headroomLimit),existingEPA:round(existingEPA),existingAddedPension:round(existingAddedPension),usedBefore:round(usedBefore),remainingBefore:round(remainingBefore),newPurchase:round(pensionBought),remainingAfter:round(remainingAfter),pass:headroomPass,usedPercentage:headroomLimit>0?round(Math.min(100,(usedBefore+pensionBought)/headroomLimit*100),1):null},warnings:['Illustration only. Added Pension factors and limits may change.','Monthly contribution results use the workbook annualised monthly-payment conversion for this web illustration.','The result does not confirm eligibility, tax treatment or available added-pension headroom.']};
 }
 export function formatAddedPension(r,locale='en-GB'){const gbp=new Intl.NumberFormat(locale,{style:'currency',currency:'GBP'});return{...r,display:{inputAmount:gbp.format(r.inputAmount),result:gbp.format(r.result)}}}

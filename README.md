@@ -1,13 +1,12 @@
 # OFFICIAL
 
-# Pension Compass Phase 4
+# Pension Compass Phase 4B
 
-Includes:
-- Lump Sum Explorer
-- Compensation Calculator
-- EPA Estimator
-- Added Pension Estimator preview for one-off payment conversions
+Added Pension enhancements:
+- One-off payment to annual pension
+- Target annual pension to one-off payment
+- Monthly contribution to annual pension
+- Target annual pension to estimated monthly contribution
+- Headroom dashboard using user-entered limit, existing EPA use and existing Added Pension
 
-The Added Pension preview converts a lump-sum payment to annual pension, or a target annual pension to a required lump-sum payment, using the supplied NPA and revaluation factor tables. Monthly contribution journeys and headroom checks are not enabled in this release.
-
-Upload all replacement files and the `assets` folder to the `compass-v2` branch. No build command is required.
+The headroom dashboard does not derive personal headroom automatically. Users must enter figures from their records. Results remain illustrations rather than entitlement checks.
