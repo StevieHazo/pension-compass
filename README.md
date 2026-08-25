@@ -1,33 +1,19 @@
-# OFFICIAL-SENSITIVE
+# CAPITA - CONFIDENTIAL INTERNAL
 
-# Pension Compass
+# Pension Compass Phase 2
 
-A dependency-free, mobile-first pension and exit toolkit ready for GitHub Pages.
+GitHub/Vercel-ready static site with:
 
-## Included
+- Working alpha lump sum illustration
+- Working Compensation Calculator for Voluntary Exit, Voluntary Redundancy and Compulsory Redundancy
+- Lower-paid underpin, pay caps, pension-age tapering, part-time restrictions, statutory comparison and CR qualifying service logic
+- Full calculation breakdown and print view
+- Roadmap placeholders for later calculators
 
-- Toolkit dashboard with eight services
-- Working alpha lump sum explorer
-- Placeholders for Early retirement, EPA, Partial Retirement, Early Retirement Buy-Out, Voluntary exit, Compulsory or voluntary redundancy, and HMRC Pension Adjustment
-- Category filters
-- Responsive app-style interface
-- Methodology and privacy pages
-- Advertising placeholders kept outside calculator inputs and results
+## Deploy
 
-## Publish on GitHub Pages
+Upload all files and the `assets` folder to the `compass-v2` branch. Vercel will use the repository as a static site. No build command is required.
 
-1. Create a new repository.
-2. Upload every file and the `assets` folder to the repository root.
-3. Commit the files.
-4. Open **Settings**, then **Pages**.
-5. Choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
+## Source handling
 
-No build command or package installation is required.
-
-## Before public launch
-
-Each placeholder requires a current rule specification, authoritative sources, worked examples, edge cases and tests. Complete accessibility, privacy, cookies, legal and financial-promotion reviews before enabling live advertising or a new calculator.
-
-## Classification
-
-OFFICIAL-SENSITIVE
+This code is derived from classified source workbooks and carries the highest source marking. Complete rights, policy, privacy, accessibility and calculation assurance before public release.
