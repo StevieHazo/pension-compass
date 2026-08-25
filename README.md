@@ -1,7 +1,3 @@
 # OFFICIAL
-
-# Pension Compass Phase 13: Scenario Builder
-
-Complete replacement package. Adds Scenario Builder to the existing Pension Compass site, including navigation, local browser storage, scenario create/edit/delete controls, comparison table and visual income chart.
-
-Upload all files and the `assets` folder to the Pension Compass preview branch. Do not deploy these files to the SOS WiFi production project.
+# Pension Compass Phase 14: Retirement Timeline
+Complete replacement package integrating Scenario Builder and Retirement Timeline into the main Pension Compass design. The timeline reads locally saved Dashboard and Scenario data and supports custom milestones.

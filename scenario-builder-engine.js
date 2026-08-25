@@ -1,24 +1,8 @@
-/** OFFICIAL - Pension Compass Scenario Builder */
+/** OFFICIAL */
 const round=(n,d=2)=>Math.round((Number(n)+Number.EPSILON)*10**d)/10**d;
-const money=(v,label)=>{const n=Number(v||0);if(!Number.isFinite(n)||n<0)throw new RangeError(`${label} must be zero or greater.`);return round(n)};
-export function createScenario(input){
- const name=String(input.name||'').trim();
- const retirementAge=Number(input.retirementAge);
- if(!name)throw new RangeError('Enter a scenario name.');
- if(!Number.isFinite(retirementAge)||retirementAge<50||retirementAge>80)throw new RangeError('Retirement age must be between 50 and 80.');
- const annualPension=money(input.annualPension,'Annual pension');
- const lumpSum=money(input.lumpSum,'Lump sum');
- const annualSalary=money(input.annualSalary,'Annual salary');
- const otherIncome=money(input.otherIncome,'Other income');
- const combinedAnnualIncome=round(annualPension+annualSalary+otherIncome);
- return{id:input.id||globalThis.crypto?.randomUUID?.()||`scenario-${Date.now()}-${Math.random().toString(16).slice(2)}`,name,retirementAge,scheme:String(input.scheme||'Not selected'),annualPension,lumpSum,annualSalary,otherIncome,combinedAnnualIncome,monthlyIncome:round(combinedAnnualIncome/12),notes:String(input.notes||'').trim(),createdAt:input.createdAt||new Date().toISOString()};
-}
-export function compareScenarios(items){
- const scenarios=items.map(createScenario);
- if(!scenarios.length)return{scenarios:[],maxIncome:0,bestIncomeId:null,earliestId:null,largestLumpSumId:null};
- const sorted=(key,dir=1)=>[...scenarios].sort((a,b)=>(a[key]-b[key])*dir);
- return{scenarios,maxIncome:Math.max(...scenarios.map(x=>x.combinedAnnualIncome)),bestIncomeId:sorted('combinedAnnualIncome',-1)[0].id,earliestId:sorted('retirementAge')[0].id,largestLumpSumId:sorted('lumpSum',-1)[0].id};
-}
-export const serialiseScenarios=items=>JSON.stringify(items.map(createScenario));
-export function parseScenarios(raw){if(!raw)return[];const data=JSON.parse(raw);if(!Array.isArray(data))throw new TypeError('Saved scenarios are invalid.');return data.map(createScenario)}
-export function formatScenario(s,locale='en-GB'){const f=new Intl.NumberFormat(locale,{style:'currency',currency:'GBP'});return{...s,display:{annualPension:f.format(s.annualPension),lumpSum:f.format(s.lumpSum),annualSalary:f.format(s.annualSalary),otherIncome:f.format(s.otherIncome),combinedAnnualIncome:f.format(s.combinedAnnualIncome),monthlyIncome:f.format(s.monthlyIncome)}}}
+const money=(v,l)=>{const n=Number(v||0);if(!Number.isFinite(n)||n<0)throw new RangeError(`${l} must be zero or greater.`);return round(n)};
+export function createScenario(i){const name=String(i.name||'').trim(),retirementAge=Number(i.retirementAge);if(!name)throw new RangeError('Enter a scenario name.');if(!Number.isFinite(retirementAge)||retirementAge<50||retirementAge>80)throw new RangeError('Retirement age must be between 50 and 80.');const annualPension=money(i.annualPension,'Annual pension'),lumpSum=money(i.lumpSum,'Lump sum'),annualSalary=money(i.annualSalary,'Annual salary'),otherIncome=money(i.otherIncome,'Other income'),combinedAnnualIncome=round(annualPension+annualSalary+otherIncome);return{id:i.id||globalThis.crypto?.randomUUID?.()||`scenario-${Date.now()}`,name,retirementAge,scheme:String(i.scheme||'Not selected'),annualPension,lumpSum,annualSalary,otherIncome,combinedAnnualIncome,monthlyIncome:round(combinedAnnualIncome/12),notes:String(i.notes||'').trim(),createdAt:i.createdAt||new Date().toISOString()}}
+export function compareScenarios(items){const scenarios=items.map(createScenario);if(!scenarios.length)return{scenarios:[],maxIncome:0};const sorted=(k,d=1)=>[...scenarios].sort((a,b)=>(a[k]-b[k])*d);return{scenarios,maxIncome:Math.max(...scenarios.map(x=>x.combinedAnnualIncome)),bestIncomeId:sorted('combinedAnnualIncome',-1)[0].id,earliestId:sorted('retirementAge')[0].id,largestLumpSumId:sorted('lumpSum',-1)[0].id}}
+export const serialiseScenarios=x=>JSON.stringify(x.map(createScenario));
+export function parseScenarios(x){if(!x)return[];const d=JSON.parse(x);if(!Array.isArray(d))throw new TypeError('Saved scenarios are invalid.');return d.map(createScenario)}
+export function formatScenario(s,l='en-GB'){const f=new Intl.NumberFormat(l,{style:'currency',currency:'GBP'});return{...s,display:Object.fromEntries(['annualPension','lumpSum','annualSalary','otherIncome','combinedAnnualIncome','monthlyIncome'].map(k=>[k,f.format(s[k])]))}}
