@@ -1,7 +1,7 @@
 # OFFICIAL
 
-# Pension Compass Phase 5
+# Pension Compass Phase 6
 
-Adds a Partial Retirement Planner preview alongside the existing Lump Sum, Compensation, EPA and Added Pension tools.
+Adds an Early Retirement Explorer preview. The NPA 60 journey uses the actuarial-reduction age points contained in the supplied workbook and interpolates between ages. Other NPAs require an official factor supplied by the user. This prevents the site from inventing unsupported factors.
 
-The planner compares income before and after job reshaping using entered salary, pension, pension draw percentage, lump sum, abatement and growth assumptions. It includes a projection chart. It is an illustration and does not recreate every legacy scheme rule or confirm eligibility.
+The result is an illustration only and is not a retirement quotation or financial advice.
