@@ -1,1 +1,1 @@
-{"name":"Pension Compass","short_name":"Pension Compass","start_url":"./#home","display":"standalone","background_color":"#f6f7ff","theme_color":"#111827","icons":[{"src":"assets/icon.svg","sizes":"any","type":"image/svg+xml"}]}
+{"name":"Civil Service Pension Assistant","short_name":"CSPA","description":"Civil Service pension planning and modelling tools.","start_url":"./#home","display":"standalone","background_color":"#edf3fa","theme_color":"#08264e","icons":[{"src":"assets/cspa-logo.png","sizes":"782x662","type":"image/png"}]}

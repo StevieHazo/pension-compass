@@ -1,7 +1,7 @@
-# OFFICIAL
+## OFFICIAL
 
-# Pension Compass Phase 13: Scenario Builder
+# Civil Service Pension Assistant: Phase 13 branded full site
 
-Complete replacement package. Adds Scenario Builder to the existing Pension Compass site, including navigation, local browser storage, scenario create/edit/delete controls, comparison table and visual income chart.
+Complete replacement package based on the working Phase 13 Scenario Builder site. Includes all calculators, engines, Dashboard, Scenario Builder, navigation, styles, manifest, 404 page and supplied Civil Service Pension Assistant logo.
 
-Upload all files and the `assets` folder to the Pension Compass preview branch. Do not deploy these files to the SOS WiFi production project.
+Upload all files and the complete `assets` folder together. No manual code edits are required.
